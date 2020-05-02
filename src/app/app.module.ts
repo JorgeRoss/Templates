@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartPageComponent } from './layout/start-page/start-page.component';
+import { ParallaxInitDirective } from './layout/directives/parallax-init.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartPageComponent
+    StartPageComponent,
+    ParallaxInitDirective
   ],
   imports: [
     BrowserModule,
