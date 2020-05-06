@@ -1,7 +1,6 @@
 import {
   Directive,
   AfterViewInit,
-  OnInit,
   Renderer2,
   ElementRef,
 } from '@angular/core';
@@ -14,9 +13,7 @@ export class ParallaxInitDirective implements AfterViewInit {
   constructor(private renderer: Renderer2, private elem: ElementRef) {}
 
   ngAfterViewInit(): void {
-    let elems = this.renderer.selectRootElement(this.elem.nativeElement, true);
-    console.log(elems);
-
+    const elems = this.renderer.selectRootElement(this.elem.nativeElement, true);
     M.Parallax.init(elems);
   }
 }
